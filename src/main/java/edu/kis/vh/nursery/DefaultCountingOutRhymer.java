@@ -2,14 +2,14 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    public static final int ERROR = -1;
-    public static final int CAPACITY = 12;
-    public static final int MAX = 11;
+    private static final int ERROR = -1;
+    private static final int CAPACITY = 12;
+    private static final int MAX = 11;
     private int[] numbers = new int[CAPACITY];
 
-    public int total = ERROR;
+    private int total = ERROR;
 
-    public void countIn(int in) {
+    protected void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
@@ -18,7 +18,7 @@ public class DefaultCountingOutRhymer {
         return total == ERROR;
     }
 
-    public boolean isFull() {
+    private boolean isFull() {
         return total == MAX;
     }
 
