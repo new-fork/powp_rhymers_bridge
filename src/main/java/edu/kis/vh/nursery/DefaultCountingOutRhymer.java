@@ -18,7 +18,7 @@ public class DefaultCountingOutRhymer {
         return total == ERROR;
     }
 
-    private boolean isFull() {
+    public boolean isFull() {
         return total == MAX;
     }
 
